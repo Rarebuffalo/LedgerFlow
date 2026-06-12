@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.toast
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Databases & Local persistence
+*.db
+*.sqlite
+*.sqlite3
+postgres_data/
+
+# Environment configurations
+.env
+.env.*
+!.env.example
+
+# Local Uploads and Outputs
+uploads/*
+!uploads/.gitkeep
+cleaned_transactions_*.csv
+*.csv
+
+# Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# System
+.DS_Store
+Thumbs.db
