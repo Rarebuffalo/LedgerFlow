@@ -1,6 +1,6 @@
-# LedgerLens — Asynchronous Financial Data Processing & Intelligence Platform
+# LedgerFlow — Asynchronous Financial Data Processing & Intelligence Platform
 
-LedgerLens is a production-grade fintech intelligence platform that automates financial data cleaning, classification, statistical anomaly detection, and narrative summary report generation. Built using a modern asynchronous backend stack, it scales to handle large datasets by utilizing a job processing pipeline.
+LedgerFlow is a production-grade fintech intelligence platform that automates financial data cleaning, classification, statistical anomaly detection, and narrative summary report generation. Built using a modern asynchronous backend stack, it scales to handle large datasets by utilizing a job processing pipeline.
 
 ---
 
