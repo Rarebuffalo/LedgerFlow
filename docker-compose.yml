@@ -1,24 +1,24 @@
 services:
   db:
     image: postgres:15-alpine
-    container_name: ledgerlens_db
+    container_name: ledgerflow_db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: ledgerlens
+      POSTGRES_DB: ledgerflow
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d ledgerlens"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ledgerflow"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: ledgerlens_redis
+    container_name: ledgerflow_redis
     ports:
       - "6379:6379"
     healthcheck:
@@ -31,11 +31,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.api
-    container_name: ledgerlens_api
+    container_name: ledgerflow_api
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ledgerlens
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ledgerflow
       - REDIS_URL=redis://redis:6379/0
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - UPLOAD_DIR=/app/uploads
@@ -51,9 +51,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.worker
-    container_name: ledgerlens_worker
+    container_name: ledgerflow_worker
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ledgerlens
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ledgerflow
       - REDIS_URL=redis://redis:6379/0
       - GEMINI_API_KEY=${GEMINI_API_KEY}
       - UPLOAD_DIR=/app/uploads
