@@ -1,6 +1,6 @@
 # Deployment & Database Migrations
 
-LedgerLens is designed to run in containerized environments. It manages PostgreSQL schemas using Alembic migrations, allowing automated database upgrades on container startup.
+LedgerFlow is designed to run in containerized environments. It manages PostgreSQL schemas using Alembic migrations, allowing automated database upgrades on container startup.
 
 ---
 
@@ -10,7 +10,7 @@ The `docker-compose.yml` file provisions four distinct services:
 
 1. **`db` (PostgreSQL):** Uses the official `postgres:15-alpine` image.
    * **Persistence:** Mounts a local Docker volume (`postgres_data`) to persist PostgreSQL records on container restarts.
-   * **Healthcheck:** Pings the engine using `pg_isready -U postgres -d ledgerlens` at 5-second intervals.
+   * **Healthcheck:** Pings the engine using `pg_isready -U postgres -d ledgerflow` at 5-second intervals.
 2. **`redis` (Redis Cache/Broker):** Uses `redis:7-alpine`.
    * **Healthcheck:** Runs `redis-cli ping` to test availability before worker execution begins.
 3. **`api` (FastAPI Server):** Builds using `Dockerfile.api`.
