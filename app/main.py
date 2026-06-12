@@ -4,7 +4,7 @@ from app.api.endpoints import router as api_router
 from app.config import settings
 
 app = FastAPI(
-    title="LedgerLens API",
+    title="LedgerFlow API",
     description="Asynchronous Financial Data Processing & Intelligence Platform",
     version="1.0.0",
     docs_url="/docs",
@@ -26,7 +26,7 @@ app.include_router(api_router, tags=["API Endpoints"])
 @app.get("/", tags=["Root"])
 def read_root():
     return {
-        "message": "Welcome to LedgerLens Financial Intelligence Platform API",
+        "message": "Welcome to LedgerFlow Financial Intelligence Platform API",
         "documentation": "/docs",
         "health": "/health"
     }
