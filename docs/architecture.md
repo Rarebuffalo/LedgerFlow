@@ -1,6 +1,6 @@
 # Platform Architecture
 
-LedgerLens is designed as a distributed, containerized platform for processing financial transaction data asynchronously. The architecture prioritizes separation of concerns, decoupling heavy I/O and AI computations from the client-facing HTTP interface.
+LedgerFlow is designed as a distributed, containerized platform for processing financial transaction data asynchronously. The architecture prioritizes separation of concerns, decoupling heavy I/O and AI computations from the client-facing HTTP interface.
 
 ## System Topology
 
