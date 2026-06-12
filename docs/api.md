@@ -1,6 +1,6 @@
 # API Reference
 
-LedgerLens exposes endpoints to upload files, monitor background jobs, download reports, search database records, and render dashboard analytics. 
+LedgerFlow exposes endpoints to upload files, monitor background jobs, download reports, search database records, and render dashboard analytics. 
 
 Interactive documentation is automatically generated and accessible via Swagger UI at `http://localhost:8000/docs`.
 
